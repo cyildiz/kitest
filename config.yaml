@@ -1,0 +1,47 @@
+baseURL: "file:///Users/cagix/Desktop/pandoc-test/kitest/public/"
+#baseURL: "https://cagix.github.io/kitest/"
+
+languageCode: "de-De"
+metaDataFormat: "yaml"
+theme: "hugo-theme-learn"
+
+
+params:
+  author: "cagix"
+  themeVariant: "green"
+  titleSeparator: " "
+  showVisitedLinks: true
+  disableSearch: true
+  disableBreadcrumb: false
+  disableNextPrev: false
+  disableLandingPageButton: true
+  disableMermaid: true
+
+
+menu:
+  shortcuts:
+  - name: "<i class='fas fa-bookmark'></i> Fahrplan"
+    url: "/fahrplan"
+    weight: 10
+  - name: "<i class='fas fa-bookmark'></i> Note/Credits"
+    url: "/note_und_credits"
+    weight: 20
+  - name: "<i class='fas fa-bookmark'></i> Syllabus"
+    url: "/syllabus"
+    weight: 30
+
+
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: true
+  instagram:
+    disable: true
+  twitter:
+    disable: true
+  vimeo:
+    disable: true
+  youtube:
+    disable: false
+    privacyEnhanced: false
