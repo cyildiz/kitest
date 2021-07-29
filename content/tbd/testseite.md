@@ -130,6 +130,8 @@ Also with syntax highlighting like `int main()`{.c} ...
         \Delta w_{ji} = -\eta \dfrac{\partial E}{\partial w_{ji}}
     $$
 
+Unterstützung für [MathJax](https://www.mathjax.org/) muss erst noch über Partials implementiert werden. Hier eine [Anleitung](https://geoffruddock.com/math-typesetting-in-hugo/).
+
 
 ## Verlinkungen
 
