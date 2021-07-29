@@ -4,7 +4,7 @@ weight: 1
 ---
 
 
-## Beispiel
+## Motivation: Einfärben von Landkarten
 
 ... Beispiel Map-Coloring-Problem
 
@@ -12,5 +12,25 @@ weight: 1
 ...
 
 ## Lösung
+
+...
+
+## Formalisierung
+
+...
+
+## Definition: Constraint Satisfaction Problem (CSP)
+
+...
+
+## Constraint-Graph
+
+...
+
+## Constraints und Arität
+
+...
+
+## Unterscheidung Wertebereiche
 
 ...

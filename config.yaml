@@ -29,6 +29,9 @@ menu:
   - name: "<i class='fas fa-bookmark'></i> Syllabus"
     url: "/syllabus"
     weight: 30
+  - name: "<i class='fas fa-bookmark'></i> Reading"
+    url: "/reading"
+    weight: 40
 
 
 privacy:

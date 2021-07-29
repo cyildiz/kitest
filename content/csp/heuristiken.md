@@ -1,6 +1,6 @@
 ---
 title: "Heuristiken"
-weight: 4
+weight: 3
 ---
 
 
@@ -9,7 +9,9 @@ weight: 4
 ...
 
 ## Gleichstand
+
 ...
 
 ## Auswahl der Werte
+
 ...

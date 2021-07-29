@@ -4,6 +4,23 @@ weight: 1
 ---
 
 
-## Einführung
+## Was ist (künstliche) Intelligenz?
+...
 
-... Beispiel Staubsaugerwelt
+## Definition Intelligenz
+...
+
+## Versuch einer Definition für "KI"
+...
+
+## Alan Turing 1950: Turing-Test
+... begründet Zweige der KI
+
+## Starke vs. schwache KI
+...
+
+## Typische Ansätze in der KI
+...
+
+## Kurzer Geschichtsüberblick
+...
