@@ -35,6 +35,10 @@ menu:
     url: "/reading"
     weight: 40
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 privacy:
   disqus:

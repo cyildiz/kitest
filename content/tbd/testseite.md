@@ -213,7 +213,41 @@ Toggle mit Namen ...
 
 ## Special Sections
 
-**TODO**: TLDR, Quizzes, Challenges, Lernziele???
+In der Datei `static/css/tldr.css` finden sich die Klassen für "TLDR" etc. aus meinem [Pandoc-Lecture](https://github.com/cagix/pandoc-lecture).
+
+Ein Versuch wäre, diese Klassen explizit über ein `<div class="tldr">` etc. einzubauen. ... Wird aber von Hugo aus Sicherheitsgründen unterdrückt, im Output steht dann nur noch `<!-- raw HTML omitted -->` ... Das könnte man ggf. durch eine Konfiguration aktivieren (siehe [Stackoverflow](https://stackoverflow.com/questions/63198652/hugo-shortcode-ignored-saying-raw-html-omitted)).
+
+Ein anderer Weg könnten ["Custom Shortcode Templates"](https://gohugo.io/templates/shortcode-templates/) sein. Aber auch hier muss man letztlich das "unsafe" Rendering explizit freischalten. Offenbar wird ein Unterscheid zwischen eigenen Shortcode Templates und denen aus einem Theme gemacht (warum?!).
+
+
+{{% tldr %}}
+*   Behebung von Bad Smells durch Refactoring
+
+Blablabla
+{{% /tldr %}}
+
+
+{{% bib %}}
+Hier könnte ein Literaturverzeichnis entstehen ...
+
+**TODO** Manuell? Variablen über ein Data-Template? Pandoc-Citeproc?
+{{% /bib %}}
+
+
+{{% outcomes %}}
+Platz für Lernziele
+
+***TODO** Nested Shortcodes für K1, K2, K3, K4 ...
+{{% /outcomes %}}
+
+{{% quizzes %}}
+*   Was bedeutet "Refactoring"?
+*   Erklären Sie ...
+{{% /quizzes %}}
+
+{{% challenges %}}
+Erstellen Sie ...
+{{% /challenges %}}
 
 
 ## Videos
