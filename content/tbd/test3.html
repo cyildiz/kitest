@@ -1,0 +1,42 @@
+---
+title: "Test3: Pure HTML"
+weight: 3
+---
+
+<h2>Mit Pandoc HTML erzeugen und in Hugo einbinden</h2>
+<ol>
+    <li>Leeres Pandoc-Template <code>body.html</code> erzeugen, Inhalt: eine einzige Zeile mit <code>$body</code></li>
+    <li>Aus einer Markdown-Datei eine self-contained HTML-Datei machen: <code>pandoc --template body.html --self-contained --standalone index.md -o test3.html</code></li>
+    <li>Der neuen HTML-Datei einen YAML-Header geben, sonst taucht das Ergebnis nicht im Menü auf!</li>
+</ol>
+<p>
+    Vorteil: Bei diesem Vorgehen muss man keine Rücksicht auf Ordnerstrukturen von Hugo nehmen, die Abbildungen etc. sind bereits in das HTML eingebettet.
+</p>
+<p>
+    Nachteile: Die von Pandoc verwendeten CSS-Klassen müssen mit denen von Hugo bzw. vom Template passen bzw. über ein eigenes CSS eingebaut werden. Shortcodes funktionieren ebenfalls nicht. Zusätzlich müsste über einen zusätzlichen Schritt ein passender YAML-Header in die entstandene HTML-Datei eingefügt werden.
+</p>
+
+<h2 id="lokale-abbildungen-mit-markdown">Lokale Abbildungen mit Markdown</h2>
+<figure>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAABWCAYAAAAEwlKUAAAABHNCSVQICAgIfAhkiAAAAmhJREFUeJztnLGKE2EUhc+ajBAC6UwIdkkaETe1W4n4DOJL+DS+hPgMIlZWa7GCTqOSBEQ2m20MZsHMEgth24V/bnE9fF+TKofhfs3AuXeODofDQWBLV5L2+32rkKqqQjK+n/9qlTEZDbT+fd0qY9jv6MPZ11YZJ/NZmpl2JalpGl1dXRWF9Ho9VVUVkrG62Or95x9FGU8e3tdkNNBm16i++FOU8eDeXQ37HX38stCr12+LMl6+eKaT+SzNTO8U/Rv+GxBsDoLNQbA5CDYHweYg2BwEm4NgcxBsDoLNQbA5CDbnpk2qqqoooGmam9+2GavNVpPRoChjtdlKki531xr2O0UZl7t/VeNpvdDj+awo47ReSMoz0yMKf2+6kkJK8ohyOktZn2UeEQsQXUkhJXlEOZ2lrM8yj4gFCF6yzEGwOQg2B8HmINgcBJuDYHMQbA6CzUGwOQg2B8HmINicrhRTkkeU01nK+izziFiAoPA3J+zCP6Kc/vTtZ6uM4+k45DmyLC+kuvCPKKfr5bnevDsrynj+dK7j6TjkObIsL3DhD7eCYHMQbA6CzUGwOQg2B8HmINgcBJuDYHMQbA6CzUGwOWEX/hHldL1c69F0XJRRL9dhz5FleYELf7iVVJ/0z5IRsTSQJSPVJ/2zZEQsDWTJ4CXLHASbg2BzEGwOgs1BsDkINgfB5iDYHASbg2BzEGwOgs1J9Un/LBkRSwNZMij8zQkr/CMu2rNkOM0jrPCPuGjPkuE0D16yzEGwOQg2B8HmINgcBJuDYHMQbA6CzUGwOQg2B8HmINicsMI/4qI9S4bTPCj8zfkLU7UiGeOJv7oAAAAASUVORK5CYII=" alt="Bildunterschrift" /><figcaption aria-hidden="true">Bildunterschrift</figcaption>
+</figure>
+<h2 id="lokale-abbildungen-mit-shortcodes">Lokale Abbildungen mit Shortcodes</h2>
+<p>{{&lt; figure src=“figs/somefig.png” title=“Bildunterschrift” &gt;}}</p>
+<p><strong>Achtung</strong>: Scheinbar muss der Pfad in einem Ordner liegen, der den selben Namen wie die referenzierende Markdown-Datei hat. Im Beispiel: Die Seite heißt <code>tbd/testseite.md</code> und referenziert eine Abbildung <code>figs/somefig.png</code>. Dann muss diese im Ordner <code>tbd/testseite/figs/somefig.png</code> liegen. Damit funktioniert das direkte Rendering in Github/Gitlab nicht mehr!</p>
+<p><strong>Anmerkung</strong>: Lt. der <a href="https://learn.netlify.app/en/shortcodes/attachments/">Doku</a> sind die folgenden Strukturen äquivalent:</p>
+<pre><code>content/
+|___  _index.md                         &lt;= mit Unterstrich (Chapter)
+|___  mypage.md
+|___  mypage.files/
+  |___  myattachments.pdf</code></pre>
+<p>und</p>
+<pre><code>content/
+|___  _index.md                         &lt;= mit Unterstrich (Chapter)
+|___  mypage/
+  |___  index.md                        &lt;= ohne Unterstrich (Default)
+  |___  files/
+    |___  myattachments.pdf</code></pre>
+<p>Dann könnte der Abbildungsordner unterhalb von <code>content/mypage/</code> liegen und wäre damit auch für Github/Gitlab erreichbar. Unschön ist dabei, dass die Seiten dann alle <code>index.md</code> heißen und man den Inhalt über den Ordnernamen ableiten muss.</p>
+<h2 id="anhänge">Anhänge</h2>
+<p>Siehe <a href="https://learn.netlify.app/en/shortcodes/attachments/">Anleitung</a>: Wenn die Seite ein Ordner <code>&lt;name&gt;/</code> ist (mit der entsprechenden Markdown-Datei <code>index.md</code> darin), dann können Anhänge im Ordner <code>&lt;name&gt;/files/</code> gespeichert werden.</p>
+<p>Über den <a href="https://gohugo.io/content-management/shortcodes/">Shortcode</a> <code>attachments</code> können dann die zur Seite gehörigen Anhänge an dieser Stelle eingebunden werden. Im Beispiel werden nur PDF-Dateien angezeigt/verlinkt.</p>
