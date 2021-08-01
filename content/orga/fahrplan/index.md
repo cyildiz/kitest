@@ -4,7 +4,6 @@ disableToc: true
 hidden: true
 ---
 
-# Ablauf der Veranstaltung
 
 Hier kommt eine Tabelle hin: In welcher Woche gibt es welches Thema, verlinkt auf die Unterseiten.
 
