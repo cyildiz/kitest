@@ -8,6 +8,8 @@ readings:
   - key: "Wuppie"
   - key: "Fluppie"
     comment: "UGH!!"
+youtube: JOmyP1ypJBs
+fhmedia: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
 ---
 
 
@@ -295,6 +297,11 @@ Es gibt einen Shortcode für YouTube: `youtube` ...
 
 Beispiel:
 {{< youtube JOmyP1ypJBs >}}
+
+Für das FH-Medienportal gibt es einen Shortcode `fhmedia`, der als Parameter den Key des Direkt-Links bekommt.
+
+Beispiel:
+{{< fhmedia c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67 >}}
 
 
 **TODO**: Definition eines eigenen Partials für die Generierung eines Direktlinks (https://gohugo.io/templates/partials/).
