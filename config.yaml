@@ -1,21 +1,22 @@
 baseURL: "file:///Users/cagix/Desktop/pandoc-test/kitest/public/"
 #baseURL: "https://cagix.github.io/kitest/"
+#baseURL: "/"
 
-languageCode: "de-De"
+languageCode: "de-DE"
 metaDataFormat: "yaml"
 theme: "hugo-theme-learn"
 
-
 params:
+  editURL: "https://github.com/cagix/kitest/edit/master/content/"
   author: "cagix"
   themeVariant: "green"
   titleSeparator: " "
   showVisitedLinks: true
-  disableSearch: true
   disableBreadcrumb: false
-  disableNextPrev: false
-  disableLandingPageButton: true
   disableInlineCopyToClipBoard: true
+  disableNextPrev: false
+  disableSearch: true
+  disableLandingPageButton: true
   disableMermaid: true
   custom_css:
   - css/tldr.css
@@ -53,4 +54,4 @@ privacy:
     disable: true
   youtube:
     disable: false
-    privacyEnhanced: false
+    privacyEnhanced: true
