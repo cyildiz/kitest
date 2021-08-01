@@ -1,6 +1,13 @@
 ---
 title: "Test der verschiedenen Markdown-Elemente"
 weight: 1
+readings:
+  - key: "AIMA"
+  - key: "Ertel"
+    comment: "Kapitel 2 und 3"
+  - key: "Wuppie"
+  - key: "Fluppie"
+    comment: "UGH!!"
 ---
 
 
@@ -178,12 +185,12 @@ Siehe [Anleitung](https://learn.netlify.app/en/shortcodes/attachments/): Wenn di
 
 Mit dem Shortcode `expand` können Toggles realisiert werden.
 
-{{%expand%}}
+{{% expand %}}
 Kurzer Toggle ohne extra Namen ...
-{{% /expand%}}
+{{% /expand %}}
 
 
-{{%expand "Was ist die Antwort?"%}}
+{{% expand "Was ist die Antwort?" %}}
 Toggle mit Namen ...
 
 ### Hier Überschrift im Toggle
@@ -200,7 +207,7 @@ Toggle mit Namen ...
       return 0;
   }
 ```
-{{% /expand%}}
+{{% /expand %}}
 
 **Anmerkung**: Laut https://gohugo.io/content-management/shortcodes/ werden Shortcodes mit `%` interpretiert und gerendert, während bei der Verwendung von `<` der eingeschlossene Code kein weiteres Rendering erfährt.
 **Achtung**: Es gibt scheinbar Shortcodes (["Videos"](#videos)), die nur mit `<` funktionieren ...
@@ -208,7 +215,39 @@ Toggle mit Namen ...
 
 ## Literatur
 
-**TODO**: Pandoc???
+### Einsatz von Variablen im YAML-Header der Seite
+
+Im YAML-Header der Seite können Einträge definiert werden:
+
+```yaml
+readings:
+  - key: "AIMA"
+  - key: "Ertel"
+    comment: "Kapitel 2 und 3"
+  - key: "Wuppie"
+  - key: "Fluppie"
+    comment: "UGH!!"
+```
+
+Dabei ist `readings` die Variable, unter der Tupel mit `key` und `comment` definiert werden können. Der `key` ist dabei der in `data/readings.yaml` verwendete BibTex-Key. Leere `comment` können weggelassen werden.
+
+Dann wird mit dem Shortcode `bib` (ohne Parameter) das Literaturverzeichnis generiert (inkl. H2-Überschrift "Literatur").
+
+{{< bib />}}
+
+**Achtung**: Die Einträge für `key` müssen als Schlüssel in `data/readings.yaml` vorkommen. Anderenfalls wird der Eintrag stillschweigend ignoriert (keine Fehlermeldung, da Verwendung in GH-Actions). Im Beispiel oben würden die Keys "Wuppie" und "Fluppie" nicht gefunden und die Einträge entsprechend nicht in die Seite aufgenommen.
+
+### Freier Inhalt
+
+Dem Shortcode `bib` (ohne Parameter) kann auch Inhalt übergeben werden (zw. öffnendem und schließendem Shortcode). Dieser wird dann als Literaturverzeichnis angezeigt (**ohne** Default-Überschrift!).
+
+{{% bib %}}
+Hier könnte ein Literaturverzeichnis entstehen ...
+{{% /bib %}}
+
+### Vorrang
+
+Der Aufruf des Shortcodes `bib` mit Inhalt hat Vorrang von dem Aufruf ohne Inhalte (aber mit gesetztem Parameter `readings`). Wenn beides nicht gesetzt/vorhanden ist, passiert nichts.
 
 
 ## Special Sections
@@ -237,7 +276,7 @@ Hier könnte ein Literaturverzeichnis entstehen ...
 {{% outcomes %}}
 Platz für Lernziele
 
-***TODO** Nested Shortcodes für K1, K2, K3, K4 ...
+**TODO** Nested Shortcodes für K1, K2, K3, K4 ...
 {{% /outcomes %}}
 
 {{% quizzes %}}
