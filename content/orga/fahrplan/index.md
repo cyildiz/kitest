@@ -1,6 +1,7 @@
 ---
 title: "Fahrplan"
 disableToc: true
+hidden: true
 ---
 
 # Ablauf der Veranstaltung

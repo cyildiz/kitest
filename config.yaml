@@ -23,16 +23,16 @@ params:
 menu:
   shortcuts:
   - name: "<i class='fas fa-bookmark'></i> Fahrplan"
-    url: "/fahrplan"
+    url: "/orga/fahrplan"
     weight: 10
   - name: "<i class='fas fa-bookmark'></i> Note/Credits"
-    url: "/note_und_credits"
+    url: "/orga/note_und_credits"
     weight: 20
   - name: "<i class='fas fa-bookmark'></i> Syllabus"
-    url: "/syllabus"
+    url: "/orga/syllabus"
     weight: 30
   - name: "<i class='fas fa-bookmark'></i> Reading"
-    url: "/reading"
+    url: "/orga/reading"
     weight: 40
 
 markup:

@@ -1,6 +1,7 @@
 ---
 title: "Syllabus"
 disableToc: true
+hidden: true
 ---
 
 ## Worum geht's hier?

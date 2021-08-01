@@ -1,6 +1,7 @@
 ---
 title: "Note_und_credits"
 disableToc: true
+hidden: true
 ---
 
 ## Wie erhalte ich meine Note und meine Credits?
