@@ -6,14 +6,14 @@ weight: 2
 
 ## Lokale Abbildungen mit Markdown
 
-![Bildunterschrift](figs/somefig.png)
+![Bildunterschrift](images/somefig.png)
 
 
 ## Lokale Abbildungen mit Shortcodes
 
-{{< figure src="figs/somefig.png" title="Bildunterschrift" >}}
+{{< figure src="images/somefig.png" title="Bildunterschrift" >}}
 
-**Achtung**: Scheinbar muss der Pfad in einem Ordner liegen, der den selben Namen wie die referenzierende Markdown-Datei hat. Im Beispiel: Die Seite heißt `tbd/testseite.md` und referenziert eine Abbildung `figs/somefig.png`. Dann muss diese im Ordner `tbd/testseite/figs/somefig.png` liegen. Damit funktioniert das direkte Rendering in Github/Gitlab nicht mehr!
+**Achtung**: Scheinbar muss der Pfad in einem Ordner liegen, der den selben Namen wie die referenzierende Markdown-Datei hat. Im Beispiel: Die Seite heißt `tbd/testseite.md` und referenziert eine Abbildung `images/somefig.png`. Dann muss diese im Ordner `tbd/testseite/images/somefig.png` liegen. Damit funktioniert das direkte Rendering in Github/Gitlab nicht mehr!
 
 **Anmerkung**: Lt. der [Doku](https://learn.netlify.app/en/shortcodes/attachments/) sind die folgenden Strukturen äquivalent:
 
