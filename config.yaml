@@ -1,5 +1,5 @@
-baseURL: "file:///Users/cagix/Desktop/pandoc-test/kitest/public/"
-#baseURL: "https://cagix.github.io/kitest/"
+#baseURL: "file:///Users/cagix/Desktop/pandoc-test/kitest/public/"
+baseURL: "https://ki-vorlesung.github.io/kitest/"
 #baseURL: "/"
 
 languageCode: "de-DE"
@@ -9,7 +9,7 @@ theme: "hugo-theme-learn"
 publishDir: docs
 
 params:
-  editURL: "https://github.com/cagix/kitest/edit/master/content/"
+  editURL: "https://github.com/KI-Vorlesung/kitest/edit/master/content/"
   author: "cagix"
   themeVariant: "green"
   titleSeparator: " "
