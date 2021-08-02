@@ -1,6 +1,4 @@
-#baseURL: "file:///Users/cagix/Desktop/pandoc-test/kitest/public/"
 baseURL: "https://ki-vorlesung.github.io/kitest/"
-#baseURL: "/"
 
 languageCode: "de-DE"
 metaDataFormat: "yaml"
