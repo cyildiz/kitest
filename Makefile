@@ -61,7 +61,7 @@ hugo:
 
 SLIDES        = $(SRC:%=$(ID)_%.pdf)
 HTML          = $(SRC:%=$(ID)_%.html)
-WEB           = $(WORKDIR)/public
+WEB           = $(WORKDIR)/docs
 
 $(ID)_%.pdf: $(MD)/%.md
 	$(PANDOC) $(SLIDEOPTIONS) -o $@ $<

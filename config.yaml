@@ -6,6 +6,8 @@ languageCode: "de-DE"
 metaDataFormat: "yaml"
 theme: "hugo-theme-learn"
 
+publishDir: docs
+
 params:
   editURL: "https://github.com/cagix/kitest/edit/master/content/"
   author: "cagix"
