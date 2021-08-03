@@ -26,6 +26,9 @@ menu:
   - name: "<i class='fas fa-bookmark'></i> Fahrplan"
     url: "/orga/fahrplan"
     weight: 10
+  - name: "<i class='fas fa-bookmark'></i> Praktikum"
+    url: "/praktikum"
+    weight: 10
   - name: "<i class='fas fa-bookmark'></i> Note/Credits"
     url: "/orga/note_und_credits"
     weight: 20
