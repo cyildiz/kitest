@@ -252,7 +252,7 @@ Hier könnte ein Literaturverzeichnis entstehen ...
 Der Aufruf des Shortcodes `bib` mit Inhalt hat Vorrang von dem Aufruf ohne Inhalte (aber mit gesetztem Parameter `readings`). Wenn beides nicht gesetzt/vorhanden ist, passiert nichts.
 
 
-## Special Sections
+## Sonstige Special Sections
 
 In der Datei `static/css/tldr.css` finden sich die Klassen für "TLDR" etc. aus meinem [Pandoc-Lecture](https://github.com/cagix/pandoc-lecture).
 
@@ -261,19 +261,20 @@ Ein Versuch wäre, diese Klassen explizit über ein `<div class="tldr">` etc. ei
 Ein anderer Weg könnten ["Custom Shortcode Templates"](https://gohugo.io/templates/shortcode-templates/) sein. Aber auch hier muss man letztlich das "unsafe" Rendering explizit freischalten. Offenbar wird ein Unterscheid zwischen eigenen Shortcode Templates und denen aus einem Theme gemacht (warum?!).
 
 
+### TL;DR
+
+#### Ohne Parameter und mit `.Inner`: Direktes Rendering
 {{% tldr %}}
 *   Behebung von Bad Smells durch Refactoring
 
 Blablabla
 {{% /tldr %}}
 
+#### Ohne Parameter: Auslesen der Page-Resource `tldr.md`
+{{< tldr />}}
 
-{{% bib %}}
-Hier könnte ein Literaturverzeichnis entstehen ...
 
-**TODO** Manuell? Variablen über ein Data-Template? Pandoc-Citeproc?
-{{% /bib %}}
-
+### Lernziele
 
 {{% outcomes %}}
 Platz für Lernziele
@@ -281,6 +282,8 @@ Platz für Lernziele
 **TODO** Nested Shortcodes für K1, K2, K3, K4 ...
 {{% /outcomes %}}
 
+
+### Quizzes und Challenges
 {{% quizzes %}}
 *   Was bedeutet "Refactoring"?
 *   Erklären Sie ...
