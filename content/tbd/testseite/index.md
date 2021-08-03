@@ -307,3 +307,19 @@ Beispiel:
 **TODO**: Definition eines eigenen Partials für die Generierung eines Direktlinks (https://gohugo.io/templates/partials/).
 
 **TODO**: Konfiguration Sitzung/Video über eine YAML-Konfiguration in `data/` (vgl. https://gohugo.io/templates/data-templates/, https://github.com/sampsyo/cs6120/blob/2020fa/data/schedule.toml und https://github.com/sampsyo/cs6120/blob/2020fa/templates/post.html)
+
+
+## Schedule
+
+Zum Erzeugen eines Schedules (aka "Fahrplan") gibt es den Shortcode `schedule`. Dieser kann mit dem Parameter `type` verwendet werden: Mit dem Wert `table` wird eine tabellenbasierter Schedule erzeugt, mit dem Wert `list` ein listenbasierter Schedule.
+
+Dabei wird die Datei `data/schedule.yaml` ausgelesen und verarbeitet.
+
+### Aufruf ohne Parameter
+{{< schedule >}}
+
+### Aufruf mit `type="table"``
+{{< schedule type="table">}}
+
+### Aufruf mit `type="list"``
+{{< schedule type="list">}}

@@ -1,0 +1,21 @@
+---
+- date: "Oct 30"
+  lecture:
+    - topic: "/orga/syllabus"
+
+- date: "Nov 30"
+  lecture:
+    - topic: "/suche/intro"
+      leader: "cagi"
+      notes: "Classes go all-virtual"
+    - topic: "/suche/informiert/astar"
+  assignment:
+    - title: "blatt01"
+      due: "Dez 30"
+
+- date: "Dez 30"
+  lecture:
+    - topic: "/mlp"
+    - topic: "/csp/ac3"
+      leader: "bc"
+---
