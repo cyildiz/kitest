@@ -284,6 +284,13 @@ Platz für Lernziele
 
 
 ### Quizzes und Challenges
+
+#### Using Page Resources
+{{< quizzes />}}
+
+{{< challenges />}}
+
+### Using inner Content
 {{% quizzes %}}
 *   Was bedeutet "Refactoring"?
 *   Erklären Sie ...
