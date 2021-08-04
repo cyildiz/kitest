@@ -276,11 +276,16 @@ Blablabla
 
 ### Lernziele
 
+#### Ohne Parameter und mit `.Inner`: Direktes Rendering
 {{% outcomes %}}
 Platz für Lernziele
+*   Behebung von Bad Smells durch Refactoring
 
-**TODO** Nested Shortcodes für K1, K2, K3, K4 ...
+Blablabla
 {{% /outcomes %}}
+
+#### Ohne Parameter: Auslesen der Page-Resource `outcomes.md`
+{{< outcomes />}}
 
 
 ### Quizzes und Challenges
