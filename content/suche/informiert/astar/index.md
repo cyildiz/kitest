@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Suche mit A*"
 weight: 3
 ---

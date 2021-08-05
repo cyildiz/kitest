@@ -1,4 +1,5 @@
 ---
+# type: lecture
 title: "Test der verschiedenen Markdown-Elemente"
 weight: 1
 readings:

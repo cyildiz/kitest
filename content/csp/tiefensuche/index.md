@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Lösen von diskreten CSP"
 weight: 2
 ---

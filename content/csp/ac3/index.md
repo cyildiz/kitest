@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Kantenkonsistenz und AC-3"
 weight: 4
 ---

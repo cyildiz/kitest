@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Optimale Spiele"
 weight: 1
 ---

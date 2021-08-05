@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Einführung"
 weight: 1
 ---

@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Alpha-Beta-Pruning"
 weight: 4
 ---

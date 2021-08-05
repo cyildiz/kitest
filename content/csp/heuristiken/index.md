@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Heuristiken"
 weight: 3
 ---

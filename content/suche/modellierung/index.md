@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Modellierung"
 weight: 2
 ---

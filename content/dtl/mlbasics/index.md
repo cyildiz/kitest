@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Machine Learning 101"
 weight: 1
 ---

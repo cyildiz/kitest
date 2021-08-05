@@ -1,6 +1,6 @@
 ---
-title: "Test eines spezifischen Templates"
 type: lecture
+title: "Test eines spezifischen Templates"
 weight: 4
 readings:
   - key: "AIMA"

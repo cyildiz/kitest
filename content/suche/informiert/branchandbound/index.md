@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Suche mit Branch-and-Bound"
 weight: 1
 ---

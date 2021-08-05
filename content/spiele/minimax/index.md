@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "Minimax"
 weight: 2
 ---

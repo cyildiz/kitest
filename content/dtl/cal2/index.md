@@ -1,4 +1,5 @@
 ---
+type: lecture
 title: "CAL2"
 weight: 2
 ---
