@@ -1,6 +1,7 @@
 ---
 title: "Test eines spezifischen Templates"
-weight: 1
+type: lecture
+weight: 4
 readings:
   - key: "AIMA"
   - key: "Ertel"
@@ -10,7 +11,6 @@ readings:
     comment: "UGH!!"
 youtube: JOmyP1ypJBs
 fhmedia: c5eacefca7463f3f284ce575fa3a5bafab65a3851e477bbaa9d8b9ba0cce3a1c49384f10e80e38dae73f0f3b22b342a2827850c3b8a1b85163ac5ebb616ccf67
-type: lecture
 ---
 
 
