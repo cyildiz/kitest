@@ -140,7 +140,19 @@ Also with syntax highlighting like `int main()`{.c} ...
         \Delta w_{ji} = -\eta \dfrac{\partial E}{\partial w_{ji}}
     $$
 
-Unterstützung für [MathJax](https://www.mathjax.org/) muss erst noch über Partials implementiert werden. Hier eine [Anleitung](https://geoffruddock.com/math-typesetting-in-hugo/).
+*   **Entscheidungsbaum** $\alpha$:
+    <div>
+    $$
+        \alpha = \left\{ \begin{array}{ll}
+            \kappa  & \text{Terminalsymbole: } \kappa = *,A,B, \ldots \\
+            x_t(\alpha_1, \alpha_2, \ldots, \alpha_{m_t}) & x_t \text{ Testattribut mit } m_t \text{ Ausprägungen}
+        \end{array} \right.
+    $$
+    </div>
+
+Unterstützung für [MathJax](https://www.mathjax.org/) muss erst noch über Partials implementiert werden. Hier eine [Anleitung](https://geoffruddock.com/math-typesetting-in-hugo/), hier noch eine [ähnliche Lösung](https://www.morch.com/posts/2021-07-24-mathjax-in-hugo/). Die beiden Anleitungen gehen auch auf das bedarfsweise Laden von MathJax ein. Dabei werden Mathe-Elemente in Spans/Divs oder Code-Blöcke eingeschlossen und eine Page-Variable `has-mathjax` gesetzt, um nur im Bedarfsfall die MathJax-Lib zu laden. Möglicherweise bietet es sich an, in einem Pandoc-Zwischenschritt die Inline- und Display-Math-Elemente entsprechend in Spans/Divs einzuschließen und die Page-Variable `has-mathjax` zu setzen.
+
+**Hinweis**: Hugo und/oder MathJax hatten Probleme mit `\left\{`, `\right.` und `\begin{array}`. Wenn man die Display-Style-Formel in ein `<div>...</div>` einschließt, klappt es dann wieder.
 
 
 ## Verlinkungen
