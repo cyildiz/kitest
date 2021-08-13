@@ -57,7 +57,7 @@ HUGO               = /usr/bin/hugo
 
 all:
 	$(PANDOC) --version
-	$(HUGO) --version
+	$(HUGO) version
 #	$(DEBIAN-PANDOC-HUGO) pandoc $(SLIDEOPTIONS) -o content/tbd/testseite/testseite.pdf content/tbd/testseite/index.md
 #	$(DEBIAN-PANDOC-HUGO) pandoc $(HTMLOPTIONS) -o content/tbd/testseite/testseite.html content/tbd/testseite/index.md
 #	$(PANDOC) $(SLIDEOPTIONS) -o content/tbd/testseite/testseite.pdf content/tbd/testseite/index.md
