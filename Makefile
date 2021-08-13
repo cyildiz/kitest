@@ -49,7 +49,25 @@ HTMLTEMPLATEOPTIONS = $(PANDOCOPTIONS) --defaults=htmltemplate.yaml
 
 ## Targets
 
-all: $(SRC)
+WORKDIR       = $(shell pwd)
+USER          = $(shell id -u):$(shell id -g)
+ALPINE-PANDOC-HUGO = docker run --rm -i -v "$(WORKDIR):/data" -w "/data" -u "$(USER)" --entrypoint="make" alpine-pandoc-hugo
+PANDOC             = /usr/local/bin/pandoc
+HUGO               = /usr/bin/hugo
+
+all:
+	$(PANDOC) --version
+	$(HUGO) --version
+#	$(DEBIAN-PANDOC-HUGO) pandoc $(SLIDEOPTIONS) -o content/tbd/testseite/testseite.pdf content/tbd/testseite/index.md
+#	$(DEBIAN-PANDOC-HUGO) pandoc $(HTMLOPTIONS) -o content/tbd/testseite/testseite.html content/tbd/testseite/index.md
+#	$(PANDOC) $(SLIDEOPTIONS) -o content/tbd/testseite/testseite.pdf content/tbd/testseite/index.md
+#	$(PANDOC) $(HTMLOPTIONS) -o content/tbd/testseite/testseite.html content/tbd/testseite/index.md
+	$(HUGO) --minify
+
+docker-all:
+	$(ALPINE-PANDOC-HUGO) all
+
+
 
 $(SRC): %: $(ID)_%.pdf $(ID)_%.html
 
