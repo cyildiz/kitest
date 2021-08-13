@@ -67,6 +67,11 @@ $(ID)_%.html: $(MD)/%.md
 	$(PANDOC) $(HTMLTEMPLATEOPTIONS) $< | $(PANDOC) $(HTMLOPTIONS) -o $@
 
 
+## build Docker image alpine-pandoc-hugo locally
+docker-image:
+	cd .github/actions/alpine-pandoc-hugo && make clean all
+
+## clean up
 clean:
 	rm -rf $(SLIDES) $(HTML) $(WEB)
 
