@@ -18,6 +18,6 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: RunHugo
-        uses: kitest/alpine-pandoc-hugo
+        uses: KI-Vorlesung/kitest/alpine-pandoc-hugo
         with:
           make-target: 'all'
