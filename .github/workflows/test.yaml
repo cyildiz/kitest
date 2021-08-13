@@ -18,6 +18,6 @@ jobs:
           fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
       - name: RunHugo
-        uses: .github/actions/alpine-pandoc-hugo
+        uses: ./.github/actions/alpine-pandoc-hugo
         with:
           make-target: 'all'
