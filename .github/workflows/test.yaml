@@ -1,0 +1,23 @@
+name: TEST
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: CheckOut
+        uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch submodules (Hugo themes, pandoc)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: RunHugo
+        uses: ./.github/actions/alpine-pandoc-hugo
+        with:
+          make-target: 'all'
